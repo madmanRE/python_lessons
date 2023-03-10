@@ -12,6 +12,6 @@ while True:
     if valid_num(n) == False or (100 <= int(n) <= 999) == False:
         print('Это не число либо не ТРЕХЗНАЧНОЕ число.\n')
     else:
-        print(sum(list(map(lambda x: int(x), [i for i in n]))))
+        print(f"Сумма цифр числа: {sum(list(map(lambda x: int(x), [i for i in n])))}")
         break
 
