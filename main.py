@@ -1,14 +1,17 @@
-# i = input()
-# j = int(input())
-# # if i!=j:
-# #     print((i+j)-1)
-# # else:
-# #     print("Невозможно...")
+def valid_num(number):
+    if number.isdigit() == False:
+        return False
+    else:
+        return True
+
+# Задача 1
+# Найдите сумму цифр трехзначного числа.
 
 while True:
-    i = input()
-    j = input()
-    if i.isdigit() == False or j.isdigit() == False:
-        print(1)
+    n = input('Введите трехзначное число:\n')
+    if valid_num(n) == False or (100 <= int(n) <= 999) == False:
+        print('Это не число либо не ТРЕХЗНАЧНОЕ число.\n')
     else:
-        print(23)
+        print(sum(list(map(lambda x: int(x), [i for i in n]))))
+        break
+
